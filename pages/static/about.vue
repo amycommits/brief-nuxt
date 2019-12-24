@@ -1,0 +1,10 @@
+<template>
+  <div>
+    <h1>Events</h1>
+  </div>
+</template>
+<template>
+  <div>
+    <h1>about</h1>
+  </div>
+</template>
