@@ -1,2 +1,2 @@
-web: npm i && nuxt build && nuxt start
+web: nuxt start
 
