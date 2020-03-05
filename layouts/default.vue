@@ -1,16 +1,11 @@
 <template>
   <div id="app">
-    <nav-bar />
     <nuxt />
   </div>
 </template>
 <script>
-import NavBar from "@/components/NavBar.vue"
 export default {
   name: "Default",
-  components: {
-    NavBar
-  },
   head() {
     return {
       titleTemplate: "%s - something ",
