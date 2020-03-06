@@ -39,16 +39,20 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: [
-    // Doc: https://bootstrap-vue.js.org
     "bootstrap-vue/nuxt",
-    // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios"
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    proxy: true // Can be also an object with default options
+  },
+
+  proxy: {
+    '/api/': process.env.HOST || 'http://localhost:3000'
+  },
   /*
    ** Build configuration
    */
