@@ -52,7 +52,7 @@ module.exports = {
   // },
 
   proxy: {
-    '/api/': process.env.HOST ? `${process.env.HOST}:${process.env.PORT}`: 'localhost:3000'
+    '^/api/': '/api'
   },
   /*
    ** Build configuration
