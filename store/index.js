@@ -1,4 +1,3 @@
-import AnimalService from '@/server/services/animal.service'
 import InternalApi from '@/api/InternalService'
 export const state = () => ({
   list: {},
@@ -13,12 +12,15 @@ export const getters = {
 }
 export const actions = {
   getList({ commit }) {
-    const message = AnimalService.list()
-    commit('SET_LIST', message.data)
+    // const message = AnimalService.list()
+    commit('SET_LIST', 'message.data')
   },
   getAnimals({ commit }) {
+    console.log('startet to get animals')
+    InternalApi.animals().then(result => {
+      commit('SET_ANIMALS', result.data)
+    })
     // const result = AnimalService.listAll()
-    commit('SET_ANIMALS', [])
   },
   getIndex({ commit }) {
     InternalApi.index().then(result => {
