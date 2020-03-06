@@ -1,5 +1,6 @@
 module.exports = {
   mode: "universal",
+  baseURL: '',
   /*
    ** Headers of the page
    */
