@@ -1,6 +1,7 @@
 const express = require("express")
 const consola = require("consola")
 const { Nuxt, Builder } = require("nuxt")
+const internalRoutes = require('./routes')
 const app = express()
 
 // Import and Set Nuxt.js options
@@ -20,7 +21,7 @@ async function start() {
   } else {
     await nuxt.ready()
   }
-
+  app.use('/api', internalRoutes)
   // Give nuxt middleware to express
   app.use(nuxt.render)
 
