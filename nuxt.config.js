@@ -41,7 +41,8 @@ module.exports = {
    */
   modules: [
     "bootstrap-vue/nuxt",
-    "@nuxtjs/axios"
+    "@nuxtjs/axios",
+    "@nuxtjs/proxy"
   ],
   /*
    ** Axios module configuration
@@ -52,7 +53,7 @@ module.exports = {
   },
 
   proxy: {
-    '/api/': { target: process.env.baseURL || 'localhost:3000', pathRewrite: {'^/api/': ''}, changeOrigin: true }
+    '/api/': { target: process.env.baseURL || 'localhost:3000', pathRewrite: {'^/api/': '/api'}, changeOrigin: true }
   },
   /*
    ** Build configuration
