@@ -52,7 +52,7 @@ module.exports = {
   // },
 
   proxy: {
-    '/api/': process.env.HOST || 'localhost:3000',
+    '/api/': process.env.PROXY_URL || 'localhost:3000',
     ws: true
   },
   /*
