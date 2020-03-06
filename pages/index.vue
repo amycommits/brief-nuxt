@@ -10,6 +10,9 @@
     <div>
       {{ animals }}
     </div>
+    <pre>
+      {{process ? process.env : 'not a thing'}}
+    </pre>
   </div>
 </template>
 <script>
