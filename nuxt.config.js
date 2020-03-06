@@ -52,7 +52,7 @@ module.exports = {
   },
 
   proxy: {
-    '/api/': process.env.HOST || 'http://localhost:3000'
+    '/api/': { target: process.env.baseURL || 'localhost:3000', pathRewrite: {'^/api/': ''}, changeOrigin: true }
   },
   /*
    ** Build configuration
