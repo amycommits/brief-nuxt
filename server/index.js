@@ -28,7 +28,7 @@ async function start() {
   } else {
     await nuxt.ready()
   }
-  app.use('/api', internalRoutes)
+
   // Give nuxt middleware to express
   app.use(nuxt.render)
 

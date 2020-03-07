@@ -24,7 +24,7 @@ export const actions = {
   },
   getIndex({ commit }) {
     InternalApi.index().then(result => {
-      commit('SET_INDEX', result.message)
+      commit('SET_INDEX', result.data)
     })
    
   }

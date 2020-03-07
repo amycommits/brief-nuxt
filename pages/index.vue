@@ -1,13 +1,13 @@
 <template>
   <div>
     <h2>got on page</h2>
-    <div>
+    <div class="list">
       {{ list }}
     </div>
-    <div>
+    <div class="index">
       {{ index }}
     </div>
-    <div>
+    <div class="animals">
       {{ animals }}
     </div>
   </div>
@@ -32,3 +32,8 @@ export default {
   }
 }
 </script>
+<style>
+  .index {
+    border: 1px solid red;
+  }
+</style>

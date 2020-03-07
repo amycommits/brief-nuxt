@@ -50,9 +50,7 @@ module.exports = {
   // axios: {
   //   proxy: true // Can be also an object with default options
   // },
-  serverMiddleware: [
-   { path: '/api', handler: '~/server/routes/index.js'}
-  ],
+  serverMiddleware: ['~/server/routes/index'],
   // proxy: {
   //   '^/api/': '/api'
   // },
