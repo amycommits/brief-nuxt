@@ -5,6 +5,7 @@ exports.list = function() {
 }
 
 exports.listAll = function() {
+  console.log('outside animal listaAll')
   return Animal.query().then(animals => {
     console.log('inside the listAll')
     console.log(animals)

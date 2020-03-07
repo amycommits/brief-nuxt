@@ -8,6 +8,9 @@ app.get('/', (req, res) => {
 app.get('/animals', (req, res) => {
   console.log('inside the animal routes')
   Animal.listAll().then(result => {
+    console.log('made it to the inner animal')
+    console.log('result')
+    console.log('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
     res.status(200).json({data: result})
   })  
   
