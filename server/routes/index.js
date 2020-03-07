@@ -1,6 +1,12 @@
-var express = require('express')
-var app = express()
+const express = require('express')
+const Knex = require('knex');
+const knexConfig = require('../../knexfile');
+const { Model } = require('objection');
+
+const app = express()
 const Animal = require('../services/animal.service')
+const knex = Knex(knexConfig.development);
+Model.knex(knex);
 
 app.get('/', (req, res) => {
   res.status(200).json({ data: 'Connected to the index of the routes folder!' });
