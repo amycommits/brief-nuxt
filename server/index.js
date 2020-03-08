@@ -1,8 +1,5 @@
 const express = require("express")
 const consola = require("consola")
-const Knex = require('knex');
-const knexConfig = require('../knexfile');
-const { Model } = require('objection');
 
 const { Nuxt, Builder } = require("nuxt")
 const internalRoutes = require('./routes')
@@ -12,8 +9,6 @@ const app = express()
 const config = require("../nuxt.config.js")
 config.dev = process.env.NODE_ENV !== "production"
 
-const knex = Knex(knexConfig.development);
-Model.knex(knex);
 
 async function start() {
   // Init Nuxt.js
