@@ -5,6 +5,7 @@ const { Model } = require('objection');
 
 const app = express()
 const Animal = require('../services/animal.service')
+console.log(`process node env = ${process.env.NODE_ENV}`)
 if (process.env.NODE_ENV !== 'production') {
   const knex = Knex(knexConfig.development);
 } else {
