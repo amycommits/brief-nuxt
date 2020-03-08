@@ -5,13 +5,16 @@ const { Model } = require('objection');
 
 const app = express()
 const Animal = require('../services/animal.service')
-console.log(`process node env = ${process.env.NODE_ENV}`)
+console.log(`process node env IS ${process.env.NODE_ENV}`)
+console.log(`process.env.NODE_ENV !== 'production'`)
+let knex = {}
 if (process.env.NODE_ENV !== 'production') {
-  const knex = Knex(knexConfig.development);
+  knex = Knex(knexConfig.development);
 } else {
-  const knex = Knex(knexConfig.production)
+  knex = Knex(knexConfig.production)
 }
-
+console.log(knex)
+console.log('^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^')
 Model.knex(knex);
 
 app.get('/', (req, res) => {
