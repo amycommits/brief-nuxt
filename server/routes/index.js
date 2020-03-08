@@ -6,6 +6,8 @@ const { Model } = require('objection');
 const app = express()
 const Animal = require('../services/animal.service')
 console.log(`process node env IS ${process.env.NODE_ENV}`)
+console.log(`postgres url IS: ${process.env.DATABASE_URL}`)
+console.log(`postgres schema: ${process.env.DATABASE_SCHEMA}`)
 console.log(process.env.NODE_ENV !== 'production')
 let knex = {}
 if (process.env.NODE_ENV !== 'production') {
